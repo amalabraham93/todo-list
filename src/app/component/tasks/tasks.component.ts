@@ -35,4 +35,11 @@ export class TasksComponent implements OnInit {
     
   }
 
+  clearall(task: Task) {
+    this.taskService.clearTask(task).subscribe(() =>(
+      this.tasks = []
+    ))
+  }
+  
+  
 }
